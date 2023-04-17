@@ -1,0 +1,25 @@
+.scroll-button {
+  background: $tertiary-color;
+  position: absolute;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  border: none;
+  border-radius: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 3;
+
+  img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+  }
+}
+
+.scroll-button.fade-out {
+  opacity: 0;
+}

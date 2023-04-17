@@ -1,0 +1,29 @@
+.hero-header {
+  position: relative;
+  height: 820px;
+  border: 120px solid $quinary-color;
+
+  img {
+    width: calc(100vw - 240px);
+    height: calc(820px - 240px);
+    object-fit: cover;
+  }
+
+  h1, h2 {
+    position: absolute;
+    left: -54px;
+    font-family: $primary-font;
+  }
+
+  h1 {
+    top: -109px;
+    font-size: 100px;
+    color: $secondary-color;
+  }
+
+  h2 {
+    top: 120px;
+    font-size: 40px;
+    color: $secondary-color;
+  }
+}

@@ -1,0 +1,33 @@
+.home-navbar, .navbar {
+  width: 100%;
+  display: flex;
+  background-color: $primary-color;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  gap: 48px;
+
+  img {
+    position: absolute;
+    left: 0;
+    height: 180px;
+  }
+}
+
+// Properties exclusively related to the home page navigation bar :
+
+.home-navbar {
+  transition: 0.7s ease-out;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-100%);
+    
+  &--scrolled {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  &--fixed {
+    position : fixed;
+  }
+}

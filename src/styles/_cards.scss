@@ -1,0 +1,19 @@
+.cards {
+  box-shadow: -30px -30px 0px 0px #FAEFE6;
+  width: 20vw;
+
+  h3 {
+    padding-block: 15px;
+    font-size: 24px;
+    font-family: $primary-font;
+    font-weight: 500;
+    background: $secondary-color;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}

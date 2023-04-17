@@ -1,0 +1,36 @@
+.prestation-header {
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $quaternary-color;
+
+  h1 {
+    color: $secondary-color;
+    width: 20vw;
+    font-family: $primary-font;
+    font-size: 62px;
+  }
+
+  select {
+    height: 30px;
+    width: 320px;
+  }
+
+  &_filters {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      height: 50px;
+      width: 50px;
+      padding-right: 10px;
+    }
+  }
+}

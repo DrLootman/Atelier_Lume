@@ -1,0 +1,23 @@
+.presentation {
+  position: relative;
+  display: flex;
+  height: 500px;
+  background-color: $secondary-color;
+  align-items: center;
+
+  p {
+    font-family: $primary-font;
+    font-weight: bold;
+    font-size: 24px;
+    color: $primary-color;
+    width: 50vw;
+    margin-right: 5vw;
+  }
+
+  img {
+    border-radius: 20px;
+    height: 400px;
+    margin: auto;
+  }
+}
+
