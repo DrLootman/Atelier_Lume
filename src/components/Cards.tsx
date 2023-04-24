@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function Cards({ firstImg }: string): JSX.Element {
   return (
     <li className="cards">
