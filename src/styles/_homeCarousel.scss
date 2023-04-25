@@ -1,4 +1,22 @@
 .home-carousel {
-  height: 100vh;
-  background-color: $secondary-color;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $quaternary-color;
+
+  .carousel .carousel-slider {
+    margin: auto;
+    z-index: 0;
+    cursor: pointer;
+  }
+
+  &_title {
+    position: relative;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 48px;
+    font-weight: 900;
+    font-family: $primary-font;
+    font-size: 32px;
+    color: $tertiary-color;
+  }
 }
