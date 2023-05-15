@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 220px;
+
+  &_informations_list {
+    margin-left: 100px;
+    width: 30vw;
+    
+    li {
+      p {
+        font-weight: $primary-weight;
+        padding: 12px;
+      }
+    }
+  }
+
+  &_icons_list {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+
+    li {
+      gap: 24px;
+
+      a {
+        svg {
+          height: 50px;
+          width: 50px;
+          transition: all .3s ease-in-out;
+          cursor: pointer;
+          opacity: 0.7;
+          color: black;
+  
+          &:hover {
+            opacity: 1;
+            transform: scale(1.2);
+          }
+        }
+
+      }
+
+    }
+  }
+
+  &_scroll_top {
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+  }
+}
+

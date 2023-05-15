@@ -1,5 +1,6 @@
 import ImageCarousel from "./Carousel";
 import { NavLink } from "react-router-dom"
+import useTitleOnScroll from "../utils/useTitleOnScroll";
 import Photo1 from "../assets/Modelisation_3D_1.jpg";
 import Photo2 from "../assets/Modelisation_3D_2.jpg";
 import Photo3 from "../assets/Modelisation_3D_3.jpg";
@@ -29,9 +30,12 @@ const images = [
 ]
 
 function HomeCarousel(): JSX.Element {
+
+  const titleClassName = useTitleOnScroll("home-carousel");
+
   return (
     <div className="home-carousel">
-      <h2 className="home-carousel_title">Des idées en 3D</h2>
+      <h2 className={`home-carousel${titleClassName}`}>Des idées en 3D</h2>
       <ImageCarousel images={images}/>
       <NavLink className="home-carousel_button" to={"/prestations"}>
         En savoir plus

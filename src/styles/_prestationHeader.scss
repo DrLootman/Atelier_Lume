@@ -1,0 +1,15 @@
+.prestation-header {
+  height: 300px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5%;
+  align-items: center;
+  background-color: $quaternary-color;
+
+  h1 {
+    color: $secondary-color;
+    width: 20vw;
+    font-family: $primary-font;
+    font-size: 62px;
+  }
+}

@@ -4,8 +4,7 @@ import useTitleOnScroll from "../utils/useTitleOnScroll";
 import { NavLink } from "react-router-dom";
 
 function HomeCards() {
-  const titleClassName = useTitleOnScroll();
-  console.log(titleClassName);
+  const titleClassName = useTitleOnScroll("home-cards");
 
   return (
     <section className="home-cards">

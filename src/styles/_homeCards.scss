@@ -3,34 +3,6 @@
   position: relative;
   background-color: $primary-color;
 
-  &_title {
-    position: relative;
-    text-align: center;
-    padding-top: 40px;
-    font-weight: 900;
-    font-family: $primary-font;
-    font-size: 32px;
-    color: $tertiary-color;
-
-    &::after {
-      content: "";
-      position: absolute; 
-      bottom: 0; 
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background-color: $tertiary-color;
-      transition: width 0.7s ease-in-out;
-      box-shadow: rgba(100, 100, 111, 0.2) 4px 4px 20px 0px;
-
-    }
-
-    &_underline::after {
-      width: 100px;
-    }
-  }
-
   &_cards {
     height: 80vh;
     display: flex;
