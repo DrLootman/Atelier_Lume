@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 function useTitleOnScroll(selector) {
   const [titleClassName, setTitleClassName] = useState("");
-  console.log(titleClassName);
+  // console.log(titleClassName);
 
   const location = useLocation();
 
@@ -20,11 +20,11 @@ function useTitleOnScroll(selector) {
     const title = document.querySelector(`.${selector}`);
 
     const rect = title.offsetTop;
-    console.log(window.innerHeight)
+    // console.log(window.innerHeight)
     
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    console.log(scrollTop)
-    console.log("rect", rect)
+    // console.log(scrollTop)
+    // console.log("rect", rect)
 
     if (scrollTop >= rect - (window.innerHeight * 0.7)  && window.location.pathname === "/") {
       setTitleClassName(`_title ${selector}_underline`);

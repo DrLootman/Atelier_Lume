@@ -14,7 +14,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+  },
+  "typedocOptions": {
+    "entryPoints": ["./src/App.tsx"],
+    "out": "../docs"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

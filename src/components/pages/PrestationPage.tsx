@@ -1,25 +1,34 @@
 import PrestationHeader from "../PrestationHeader";
 import PrestationCard from "../PrestationCard";
 import PrestationCategoryName from "../PrestationCategoryName";
-
-const tab = [1, 2, 3, 4, 5, 6];
+import { useState, useEffect } from "react";
+import useGet from "../../utils/useGet";
 
 function PrestationPage() {
+  const [data, setData] = useState([]);
+
+  useGet("api/realisation", setData);
+
+  console.log("Mes données :", data);
+
   return (
     <>
-    {tab.map((el) => {
-      return (
-        <section>
-          <PrestationHeader />
-          <PrestationCategoryName />
-          {tab.map((el) => (
-            <PrestationCard key={el} index={el} />
-          ))}
-        </section>
-
-      )
-    })
-    }
+      <PrestationHeader />
+      {data?.map((el) => {
+        return (
+          <section>
+            <PrestationCategoryName categoryName={el.photo_category_name} />
+            {data[0].realisationArticles.map((infos) => (
+              <PrestationCard
+                key={infos.id}
+                index={infos.id}
+                URL={infos.URL}
+                paragraph={infos.paragraph}
+              />
+            ))}
+          </section>
+        );
+      })}
     </>
   );
 }

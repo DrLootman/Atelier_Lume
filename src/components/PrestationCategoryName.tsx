@@ -1,6 +1,8 @@
-function PrestationCategoryName() {
+import { CategoryNameI } from "../utils/interfaces/prestation";
+
+function PrestationCategoryName({ categoryName }: CategoryNameI) {
   return (
-    <h2 id="prestation_category_name">Décoration d'intérieur</h2>
+    <h2 id="prestation_category_name">{categoryName}</h2>
   )
 }
 

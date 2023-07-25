@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { ImageUrlI } from "../utils/interfaces/cards";
 
-function Cards({ firstImg }: string): JSX.Element {
+function Cards({ URL }: ImageUrlI): JSX.Element {
   return (
     <li className="cards">
       <h3>Home staging</h3>
-      <img src={firstImg} alt="home staging" />
+      <img src={`http://localhost:8000${URL}`} alt="home staging" />
     </li>
   )
 }

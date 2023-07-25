@@ -39,9 +39,7 @@
             transform: scale(1.2);
           }
         }
-
       }
-
     }
   }
 
@@ -50,6 +48,10 @@
     display: flex;
     justify-content: center;
     width: 30vw;
+
+    svg {
+      animation: colorRadius infinite 3s ease;
+    }
   }
 }
 

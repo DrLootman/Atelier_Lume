@@ -9,6 +9,7 @@ import HomePage from "./components/pages/HomePage";
 import Footer from "./components/globals/Footer";
 
 function App() {
+
   return (
     <div className="app">
       <HomeNavBar />

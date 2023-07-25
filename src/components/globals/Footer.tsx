@@ -2,6 +2,7 @@ import ScrollButton from "../ScrollButton";
 import arrow from "../../assets/Arrow.png";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
+import { BiUpArrowCircle } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 
 function Footer() {
@@ -38,7 +39,7 @@ function Footer() {
       </ul>
 
       <div className="footer_scroll_top">
-        <h1>Youpi</h1>
+        <BiUpArrowCircle size={70} />
       </div>
     </footer>
   );
