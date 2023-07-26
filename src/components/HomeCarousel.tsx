@@ -30,7 +30,6 @@ const images = [
 ]
 
 function HomeCarousel(): JSX.Element {
-
   const titleClassName = useTitleOnScroll("home-carousel");
 
   return (

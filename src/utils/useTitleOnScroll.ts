@@ -1,9 +1,8 @@
 import { useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-function useTitleOnScroll(selector) {
+function useTitleOnScroll(selector: string) {
   const [titleClassName, setTitleClassName] = useState("");
-  // console.log(titleClassName);
 
   const location = useLocation();
 
@@ -19,14 +18,14 @@ function useTitleOnScroll(selector) {
   const handleScroll = () => {
     const title = document.querySelector(`.${selector}`);
 
-    const rect = title.offsetTop;
-    // console.log(window.innerHeight)
-    
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    // console.log(scrollTop)
-    // console.log("rect", rect)
+    const rect = (title as HTMLElement).offsetTop;
 
-    if (scrollTop >= rect - (window.innerHeight * 0.7)  && window.location.pathname === "/") {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (
+      scrollTop >= rect - window.innerHeight * 0.7 &&
+      window.location.pathname === "/"
+    ) {
       setTitleClassName(`_title ${selector}_underline`);
     } else {
       setTitleClassName("_title");
