@@ -10,6 +10,6 @@ export default function useGet<T>(endpoint: string, setData: React.Dispatch<Reac
       .then((res) => res.json())
       .then(setData)
       .catch((err) => console.error(err));
-    return () => controller.abort();
+    // return () => controller.abort();
   }, []);
 }
