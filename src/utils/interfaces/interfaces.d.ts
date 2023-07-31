@@ -15,3 +15,11 @@ export interface CategoryWithRealisationArticlesI {
 export interface ImageUrlI {
   URL: string;
 }
+
+// Interfaces that concern inspiration tables:
+export interface InspirationImageI {
+  id: number;
+  URL: string;
+  label: string;
+  inspirationCategoryId?: number;
+}

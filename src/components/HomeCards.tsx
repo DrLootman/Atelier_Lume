@@ -8,7 +8,7 @@ import { ImageUrlI } from "../utils/interfaces/interfaces";
 
 function HomeCards() {
   const [imageUrl, setImageUrl] = useState<ImageUrlI[]>([]);
-  
+    
   useGet<ImageUrlI>("api/articles/images", setImageUrl);
   
   const titleClassName = useTitleOnScroll("home-cards");

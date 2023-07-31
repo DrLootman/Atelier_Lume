@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import CarouselImage from "./CarouselImage";
+import { InspirationImageI } from "../utils/interfaces/interfaces";
 
-function ImageCarousel({ images }) {
+function ImageCarousel({ data }: { data: InspirationImageI[] }) {
   return (
     <Carousel
       className="carousel"
@@ -11,12 +13,13 @@ function ImageCarousel({ images }) {
       width="90%"
       showStatus={false}
     >
-      {images.map((el) => {
+      {data?.map((el: InspirationImageI) => {
         return (
-          <div key={el.id} className="_slot">
-            <img src={el.URL} alt="image in the carousel" />
-            <p className="legend">{el.legend}</p>
-          </div>
+          <CarouselImage 
+            id={el.id} 
+            URL={el.URL} 
+            label={el.label} 
+          />
         );
       })}
     </Carousel>
