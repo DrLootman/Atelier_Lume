@@ -5,7 +5,7 @@ function Cards({ URL }: ImageUrlI): JSX.Element {
   return (
     <li className="cards">
       <h3>Home staging</h3>
-      <img src={`http://localhost:8000${URL}`} alt="home staging" />
+      <img src={`http://localhost:8000${URL}`} alt="home staging" loading="lazy" />
     </li>
   )
 }
