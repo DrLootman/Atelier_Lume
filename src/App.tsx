@@ -7,14 +7,17 @@ import Presentation from "./components/Presentation";
 import HomeCards from "./components/HomeCards";
 import HomePage from "./components/pages/HomePage";
 import Footer from "./components/globals/Footer";
+import { ToastContextProvider } from "./components/toast/ToastContext";
 
 function App() {
 
   return (
     <div className="app">
-      <HomeNavBar />
-      <Router />
-      <Footer />
+      <ToastContextProvider>
+        <HomeNavBar />
+        <Router />
+        <Footer />
+      </ToastContextProvider>
     </div>
   );
 }

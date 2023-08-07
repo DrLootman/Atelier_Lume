@@ -23,3 +23,10 @@ export interface InspirationImageI {
   label: string;
   inspirationCategoryId?: number;
 }
+
+// Interfaces that concern user data:
+
+export interface UserDataI {
+  email: string;
+  password: string;
+}

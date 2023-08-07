@@ -6,44 +6,25 @@ import { InspirationImageI } from "../utils/interfaces/interfaces";
 function CarouselContainer({ data }: { data: InspirationImageI[] }) {
   const carouselSettings = {
     className: "carousel",
-    showThumbs: true,
-    showArrows: true,
-    interval: 5000,
     autoPlay: true,
     infiniteLoop: true,
+    interval: 5000,
+    showArrows: true,
     width: "80%",
+    showThumbs: true,
     showStatus: false
   }
 
   return (
     <Carousel {...carouselSettings}>
-     <div>
-       <img src={`http://localhost:8000${data[0]?.URL}`} alt="image in the carousel" loading="lazy" />
-       <p className="legend">{data[0]?.label}</p>
-     </div>
-     <div>
-       <img src={`http://localhost:8000${data[1]?.URL}`} alt="image in the carousel" loading="lazy" />
-       <p className="legend">{data[1]?.label}</p>
-     </div>
-     <div>
-       <img src={`http://localhost:8000${data[2]?.URL}`} alt="image in the carousel" loading="lazy" />
-       <p className="legend">{data[2]?.label}</p>
-     </div>
-     <div>
-       <img src={`http://localhost:8000${data[3]?.URL}`} alt="image in the carousel" loading="lazy" />
-       <p className="legend">{data[3]?.label}</p>
-     </div>
+      {data.map((el: InspirationImageI) => (
+        <div key={el.id}>
+          <img src={`http://localhost:8000${el.URL}`} alt="image in the carousel" loading="lazy" />
+          <p className="legend">{el.label}</p>
+        </div>
+      ))}
     </Carousel>
   );
 }
 
 export default CarouselContainer;
-
-// {data?.map((el: InspirationImageI) => {
-//   return (
-//     <div key={el.id}>
-//       <img src={`http://localhost:8000${el.URL}`} alt="image in the carousel" loading="lazy" />
-//       <p className="legend">{el.label}</p>
-//     </div>
-//   );
-// })}
