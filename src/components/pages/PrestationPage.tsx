@@ -1,4 +1,4 @@
-import PrestationHeader from "../PrestationHeader";
+import PrestationHeader from "../HeaderTitle";
 import PrestationCard from "../PrestationCard";
 import PrestationCategoryName from "../PrestationCategoryName";
 import { useState, useEffect } from "react";
@@ -15,10 +15,10 @@ function PrestationPage() {
 
   return (
     <>
-      <PrestationHeader />
+      <PrestationHeader title={"Mes réalisations"} />
       {data?.map((el: CategoryWithRealisationArticlesI) => {
         return (
-          <section>
+          <section key={el.id}>
             <PrestationCategoryName categoryName={el.photo_category_name} />
             {el.realisationArticles.map((infos: RealisationArticleI): JSX.Element => (
                     <PrestationCard

@@ -1,0 +1,29 @@
+.confirm-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 200px;
+  width: 400px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+  form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 3% 0;
+    animation: fadeOn .2s ease forwards;
+
+    p {
+      button {
+        margin-inline: 5%;
+
+        &:first-child {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { CategoryNameI } from "../utils/interfaces/prestation";
+import { CategoryNameI } from "../utils/interfaces/interfaces.d";
 
 function PrestationCategoryName({ categoryName }: { categoryName: string }) {
   return (

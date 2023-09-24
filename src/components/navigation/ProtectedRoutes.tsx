@@ -1,9 +1,22 @@
 import { Navigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
+import { ReactNode } from "react";
 
-export default function ProtectedRoutes({ element: Component }: { element: React.ElementType }) {
-  let isAuthenticated = null;
+interface ProtectedRouteProps {
+  children: ReactNode;
+}
 
-  if (!isAuthenticated) return <Navigate to="/" />
+export default function ProtectedRoutes({ children }: ProtectedRouteProps) {
+  const userContext = useContext(UserContext);
 
-  return <Component />
+  if (!userContext) {
+    throw new Error("UserContext not properly initialized") 
+  }
+
+  const { user } = userContext;
+  
+  if (!user) return <Navigate to="/" />
+
+  return <>{ children }</>
 }

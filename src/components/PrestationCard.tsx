@@ -1,4 +1,4 @@
-import { PrestationCardI } from "../utils/interfaces/prestation";
+import { PrestationCardI } from "../utils/interfaces/interfaces.d";
 
 function PrestationCard({ index, URL, paragraph }: PrestationCardI): JSX.Element {
   return (

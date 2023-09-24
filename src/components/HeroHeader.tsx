@@ -6,7 +6,8 @@ function HeroHeader() {
     <header className="hero-header">
       <img src={img} alt="main banner that represents a home" />
       <h1>Atelier Lume</h1>
-      <h2>Décoratrice d'intérieur</h2>
+      <h2>Design d'espace</h2>
+      <h3>Décoratrice d'intérieur</h3>
       <ScrollButton />
     </header>
   )

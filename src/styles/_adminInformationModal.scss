@@ -1,0 +1,78 @@
+.admin_information_modal {
+  background-color: #fbfbfb;
+  width: 100%;
+  height: 34rem;
+  border-radius: 20px;
+
+  &_selector {
+    display: flex;
+    justify-content: center;
+
+    select {
+      height: 50px;
+      margin: 40px 0 0 0;
+      width: 20rem;
+      padding: 7px 40px 7px 12px;
+      border: 1px solid #e8eaed;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px -2px #9098a9;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 16px;
+
+      option {
+        font-size: 1.2rem;
+        color: #223254;
+        &:focus {
+          outline: none;
+          border-color: #0077ff;
+          box-shadow: 0 0 0 2px rgba(#0077ff, 0.2);
+        }
+      }
+    }
+
+    p {
+      margin: 50px 0 0 0;
+      color: black;
+      padding: 0 2rem;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  &_photo {
+    animation: fadeOn .3s ease forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    img {
+      width: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin: 32px 0 0 0;
+    }
+    .custom-file-label {
+      background-color: #f39c12;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      transition: all .2s ease;
+
+      &:hover {
+        background-color: #e67e22;
+      }
+
+      &:active {
+        background-color: #d35400;
+      }
+
+      #profile {
+        display: none;
+      }  
+    }
+  }
+}

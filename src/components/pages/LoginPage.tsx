@@ -1,9 +1,22 @@
-import { useState } from "react";
-import { UserDataI } from "../../utils/interfaces/interfaces";
+import { useState, useContext } from "react";
+import { TokenDecodedI, UserDataI } from "../../utils/interfaces/interfaces";
 import { useToasts } from "../toast/ToastContext";
+import { UserContext } from "../contexts/UserContext";
+import jwt_decode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
+  const navigate = useNavigate();
   const { pushToast } = useToasts();
+
+  const userContext = useContext(UserContext);
+
+  if (!userContext) {
+    throw new Error("UserContext not properly initialized");
+  }
+
+  const { setUser } = userContext;
+
   const [userData, setUserData] = useState<UserDataI>({
     email: "",
     password: ""
@@ -29,7 +42,6 @@ export default function LoginPage() {
       .then((res) => res.json())
       .then(({ token }) => {
         if (!token) {
-          console.log("J'attends un toast")
           pushToast({
             type: "danger",
             title: "Erreur",
@@ -38,12 +50,26 @@ export default function LoginPage() {
           })
         }
 
+        const decoded = jwt_decode<TokenDecodedI>(token);
+
         localStorage.setItem("token", token);
+        setUser(decoded.payload);
 
         setUserData({
           email: "",
           password: ""
         })
+      })
+      .then(() => {
+        pushToast({
+          type: "success",
+          title: `Bonjour Camille !`,
+          content: "Les données renseignées sont valides",
+          duration: 5
+        })
+        setTimeout(() => {
+          navigate("/")
+        }, 5000)
       })
   }
 
@@ -56,19 +82,19 @@ export default function LoginPage() {
         />
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">
-            <input 
-              type="text" 
-              name="email" 
-              value={userData.email} 
-              placeholder="Email" 
+            <input
+              type="text"
+              name="email"
+              value={userData.email}
+              placeholder="Email"
               onChange={handleChange}
             />
           </label>
           <label>
-            <input 
-              type="password" 
-              name="password" 
-              value={userData.password} 
+            <input
+              type="password"
+              name="password"
+              value={userData.password}
               placeholder="Mot de passe"
               onChange={handleChange}
             />

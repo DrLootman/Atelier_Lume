@@ -20,7 +20,7 @@ function HomeCarousel(): JSX.Element {
         <CarouselContainer data={data} />
       }
       
-      <NavLink className="home-carousel_button" to={"/prestations"}>
+      <NavLink className="home-carousel_button" to={"/realisations"}>
         En savoir plus
       </NavLink>
     </div>

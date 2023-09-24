@@ -5,12 +5,13 @@ import firstImgCard from "../assets/Deco_2.jpg";
 import useTitleOnScroll from "../utils/useTitleOnScroll";
 import useGet from "../utils/useGet";
 import { ImageUrlI } from "../utils/interfaces/interfaces";
+import { useConfirm } from "./confirmModal/ConfirmContext";
 
 function HomeCards() {
   const [imageUrl, setImageUrl] = useState<ImageUrlI[]>([]);
-    
+
   useGet<ImageUrlI>("api/articles/images", setImageUrl);
-  
+
   const titleClassName = useTitleOnScroll("home-cards");
   return (
     <section className="home-cards">
@@ -18,10 +19,10 @@ function HomeCards() {
 
       <ul className="home-cards_cards">
         {imageUrl?.map((el): JSX.Element => {
-            return <Cards URL={el.URL} key={el.URL} />;
+          return <Cards URL={el.URL} key={el.URL} />;
         })}
       </ul>
-      <NavLink className="home-cards_button" to={"/prestations"}>
+      <NavLink className="home-cards_button" to={"/realisations"}>
         En voir plus
       </NavLink>
     </section>

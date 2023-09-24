@@ -1,16 +1,12 @@
-import avatar from "../assets/Profile_Img.jpg";
+// import avatar from "../assets/Profile_Img.jpg";
 
-function Presentation() {
+import { PersonnalInfosI } from "../utils/interfaces/interfaces";
+
+function Presentation({ photo_url, profile_paragraph }: PersonnalInfosI) {
   return (
     <section className="presentation">
-      <img src={avatar} alt="avatar" />
-      <p>
-        Je suis Camille, une décoratrice d'intérieur passionnée par
-        l'aménagement et la mise en scène des espaces de vie. J'ai récemment
-        obtenu mon diplôme en architecture intérieure et j'ai depuis travaillé
-        avec différents clients pour créer des designs intérieurs sur mesure qui
-        répondent à leurs besoins et reflètent leur personnalité.
-      </p>
+      <img src={`${import.meta.env.VITE_BACKEND_URL}/${photo_url}`} alt="avatar" />
+      <p>{profile_paragraph}</p>
     </section>
   );
 }

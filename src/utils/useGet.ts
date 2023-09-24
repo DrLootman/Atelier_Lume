@@ -1,6 +1,9 @@
 import { useEffect, SetStateAction, Dispatch } from "react";
 
-export default function useGet<T>(endpoint: string, setData: React.Dispatch<React.SetStateAction<T[]>>): void {
+export default function useGet<T>(
+  endpoint: string,
+  setData: React.Dispatch<React.SetStateAction<T[]>>
+): void {
   useEffect(() => {
     const controller = new AbortController();
 
