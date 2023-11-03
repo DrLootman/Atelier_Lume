@@ -10,16 +10,17 @@ import { useConfirm } from "./confirmModal/ConfirmContext";
 function HomeCards() {
   const [imageUrl, setImageUrl] = useState<ImageUrlI[]>([]);
 
-  useGet<ImageUrlI>("api/articles/images", setImageUrl);
+  useGet<ImageUrlI>("api/creation", setImageUrl);
 
   const titleClassName = useTitleOnScroll("home-cards");
+
   return (
     <section className="home-cards">
       <h2 className={`home-cards${titleClassName}`}>Mes créations</h2>
 
       <ul className="home-cards_cards">
         {imageUrl?.map((el): JSX.Element => {
-          return <Cards URL={el.URL} key={el.URL} />;
+          return <Cards photo_url={el.photo_url} label={el.label} key={el.id} />;
         })}
       </ul>
       <NavLink className="home-cards_button" to={"/realisations"}>

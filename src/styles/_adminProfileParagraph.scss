@@ -1,0 +1,13 @@
+.admin_information_modal_paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  textarea {
+    font-size: 1.2rem;
+    width: 80%;
+    height: 240px;
+    margin: 5vh auto;
+  }
+}

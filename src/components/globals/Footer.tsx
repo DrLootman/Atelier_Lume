@@ -13,10 +13,10 @@ function Footer() {
           <p>Camille BERNARDINI</p>
         </li>
         <li>
-          <p>06 - ?? - ?? - ?? - ??</p>
+          <p>06 - 64 - 24 - 39 - 73</p>
         </li>
         <li>
-          <p>camillebernardini@hotmail.com</p>
+          <p>latelierlume@gmail.com</p>
         </li>
       </ul>
 

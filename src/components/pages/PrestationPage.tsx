@@ -21,13 +21,13 @@ function PrestationPage() {
           <section key={el.id}>
             <PrestationCategoryName categoryName={el.photo_category_name} />
             {el.realisationArticles.map((infos: RealisationArticleI): JSX.Element => (
-                    <PrestationCard
-                      key={infos.id}
-                      index={infos.id}
-                      URL={infos.URL}
-                      paragraph={infos.paragraph}
-                    />
-                )
+              <PrestationCard
+                key={infos.id}
+                index={infos.id}
+                URL={infos.URL}
+                paragraph={infos.paragraph}
+              />
+            )
             )}
           </section>
         );

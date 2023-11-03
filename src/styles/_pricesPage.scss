@@ -1,0 +1,49 @@
+.prestations_list {
+  background-color: white;
+  padding: 12vh 0 5vh 0;
+
+  li {
+    background-color: $quaternary-color;
+    box-shadow: -50px -61px 0px 0px $secondary-color, rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 40vw;
+    min-height: 60vh;
+    padding: 0 0 5vh 0;
+
+    &:nth-child(odd) {
+    margin: 0 auto 15vh 15vw;
+    }
+  
+    &:nth-child(even) {
+      margin: 0 15vw 15vh auto;
+    }
+  }
+
+
+  h2, h3, p {
+    color: $secondary-color;
+  }
+
+  h2, h3 {
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    padding-top: 5vh;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin: 5vh 40%;
+    padding: 1rem 0;
+    font-size: 2rem;
+    border: 1px solid $secondary-color;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 1.4rem;
+    padding: 1vh 2vw;
+    font-weight: 600;
+  }
+}

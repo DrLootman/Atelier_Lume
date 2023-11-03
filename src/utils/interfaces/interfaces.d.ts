@@ -13,7 +13,9 @@ export interface CategoryWithRealisationArticlesI {
 }
 
 export interface ImageUrlI {
-  URL: string;
+  id?: number;
+  photo_url: string;
+  label: string;
 }
 
 // Interfaces about prestation page :
@@ -39,6 +41,10 @@ export interface PersonnalInfosI {
   id?: number;
   photo_url: string;
   profile_paragraph: string;
+}
+
+export interface NewParagraphI {
+  paragraph: string;
 }
 
 export interface OptionSelectorI {

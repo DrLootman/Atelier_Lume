@@ -5,6 +5,7 @@ import HomeCarousel from "../HomeCarousel";
 import useGet from "../../utils/useGet";
 import { useState } from "react";
 import { PersonnalInfosI } from "../../utils/interfaces/interfaces";
+import HomeBoards from "../HomeBoards";
 
 function HomePage(): JSX.Element {
   const [personnalInfos, setPersonnalInfos] = useState<PersonnalInfosI[]>([]);
@@ -21,6 +22,7 @@ function HomePage(): JSX.Element {
         />
       }
       <HomeCards />
+      <HomeBoards />
       <HomeCarousel />
     </>
   )

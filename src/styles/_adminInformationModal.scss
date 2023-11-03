@@ -41,25 +41,26 @@
   }
 
   &_photo {
+    position: relative;
     animation: fadeOn .3s ease forwards;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
+    height: 75%;
 
     img {
-      width: 300px;
+      max-height: 80%;
       border-radius: 20px;
-      object-fit: cover;
-      margin: 32px 0 0 0;
+      object-fit: contain;
     }
+
     .custom-file-label {
       background-color: #f39c12;
       color: white;
       padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
-      display: inline-block;
       transition: all .2s ease;
 
       &:hover {

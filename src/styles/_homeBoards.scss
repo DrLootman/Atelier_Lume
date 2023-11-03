@@ -1,0 +1,15 @@
+.home_boards {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  
+  li {
+    padding: 10vh 0;
+    
+    img {
+      width: 40vw;
+      height: 50vh;
+      object-fit: cover;
+    }
+  }
+}

@@ -35,7 +35,7 @@ function NavLinks(): JSX.Element {
             <NavLink
               to={link.to}
               end
-              style={({ isActive }) => isActive ? activeStyle : null}
+              style={({ isActive }) => isActive ? activeStyle : {}}
             >
               {link.label}
             </NavLink>

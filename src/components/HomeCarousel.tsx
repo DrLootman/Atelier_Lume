@@ -14,7 +14,7 @@ function HomeCarousel(): JSX.Element {
   const titleClassName = useTitleOnScroll("home-carousel");
   return (
     <div className="home-carousel">
-      <h2 className={`home-carousel${titleClassName}`}>Des idées en 3D</h2>
+      <h2 className={`home-carousel${titleClassName}`}>Planches en 3D</h2>
 
       {data.length &&
         <CarouselContainer data={data} />
