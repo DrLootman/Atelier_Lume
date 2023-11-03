@@ -27,7 +27,7 @@ function Footer() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="https://www.instagram.com">
+          <NavLink to="https://www.instagram.com/latelierlume?igshid=YTQwZjQ0Nml0OA==">
             <AiFillInstagram />
           </NavLink>
         </li>
