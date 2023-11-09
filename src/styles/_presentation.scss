@@ -21,3 +21,21 @@
   }
 }
 
+@media screen and (max-width: 815px) {
+  .presentation {
+    height: auto;
+    flex-direction: column;
+
+    img {
+      margin: 5vh 0 0 0;
+    }
+
+    p {
+      width: 70%;
+      text-align: center;
+      margin: 5vh 0 5vh 0;
+      font-size: 1.3rem;
+    }
+  }
+}
+

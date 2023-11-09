@@ -1,6 +1,7 @@
 .home_boards {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 4vw;
   
   li {
@@ -11,5 +12,20 @@
       height: 50vh;
       object-fit: cover;
     }
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .home_boards {
+    flex-direction: column;
+
+    li {
+      padding: 4vh;
+      img {
+        width: 80vw;
+      }
+
+    }
+
   }
 }

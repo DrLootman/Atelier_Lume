@@ -1,10 +1,10 @@
 .home-cards {
-  height: 95vh;
+  height: 700px;
   position: relative;
   background-color: $primary-color;
   
   &_cards {
-    height: 70vh;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,5 +13,17 @@
 
   &_button {
     z-index: 0;
+  }
+}
+
+
+@media screen and (max-width: 815px) {
+  .home-cards {
+    height: auto;
+
+    &_cards {
+      margin: 5rem 0 2rem 0;
+      flex-direction: column;
+    }
   }
 }

@@ -12,3 +12,13 @@
     }
   }
 }
+
+@media screen and (max-width: 955px) {
+  .nav-links {
+    li {
+      a {
+        font-size: clamp(12px, 4vw, 24px);
+      }
+    }
+  }
+}

@@ -15,7 +15,6 @@
 }
 
 // Properties exclusively related to the home page navigation bar :
-
 .home-navbar {
   transition: 0.7s ease-out;
   z-index: 1;
@@ -29,5 +28,13 @@
 
   &--fixed {
     position : fixed;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .home-navbar, .navbar {
+    img {
+      display: none;
+    }
   }
 }

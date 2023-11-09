@@ -45,5 +45,11 @@
     font-size: 1.4rem;
     padding: 1vh 2vw;
     font-weight: 600;
+
+    &:first-of-type {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: black;
+    }
   }
 }

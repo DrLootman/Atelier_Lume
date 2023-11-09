@@ -16,10 +16,10 @@ export default function PricesPage() {
           </li>
           <li>
             <article>
-              <h2>Agencement et décoration</h2>
-              <h3>290 €</h3>
+              <h2>E-book déco</h2>
+              <h3>260 €</h3>
               <p>Plusieurs rendez-vous</p>
-              <p>Discussion autour de votre projet, compte rendu de notre échange et de votre projet par écrit, réalisation d'une planche inspiration / décoration par pièce, d'une planche matériaux par pièce, d'une planche mobilier par pièce.</p>
+              <p>Discussion autour de votre projet, compte rendu de notre échange et de votre projet par écrit, réalisation d'une planche inspiration / décoration, d'une planche matériaux, d'une planche mobilier.</p>
             </article>
           </li>
           <li>
@@ -28,6 +28,14 @@ export default function PricesPage() {
               <h3>570 €</h3>
               <p>Plusieurs rendez-vous</p>
               <p>Prestation identique à la deuxième, avec une shopping liste, des vues en modélisation 3D par pièce pour avoir une idée concrète du rendu.</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h2>La shopping liste</h2>
+              <h3>150 €</h3>
+              <p>Sans rendez-vous</p>
+              <p>Je donne vie à vos inspirations. A partir de photos de décoration qui vous plaisent et que vous me faites parvenir, j'établis une liste shopping déco complète en fonction de votre budget, avec les références des produits, leurs prix et le coût global.</p>
             </article>
           </li>
         </ul>
